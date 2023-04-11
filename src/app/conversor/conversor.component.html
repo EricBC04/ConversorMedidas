@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta https-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial scale=1.0">
+    <link rel="stylesheet" type="text/css" href="conversor.component.css">
+    <title>Conversor Moeda</title>
+
+</head>
+<body>
+        <div class="container">
+
+
+                <h3>Conversor de metros</h3>
+                <hr>
+                <input type="number" placeholder="Digite a medida em Metros" id="medida">
+                <br><br>
+                <input type="text" placeholder="Resultado" id="resposta" readonly style="width: 170px;">
+                <br><br>
+                <button type="button" onclick="Km()">Metros para Km</button>
+                <br><br>
+                <button type="button" onclick="Cm()">Metros para Cm</button>
+                <br><br>
+                <button type="button" onclick="Mm()">Metros para Mm</button>
+
+
+        </div>
+</body>
+<script>
+
+    function Km()
+    {
+
+        var medida, resposta;
+
+    medida = parseFloat(document.getElementById("medida").value);
+
+    resposta = medida/1000;
+
+    document.getElementById("resposta").value = resposta;
+
+    }
+
+    function Cm()
+    {
+
+      var medida, resposta;
+
+    medida = parseFloat(document.getElementById("medida").value);
+
+    resposta = medida/0.01;
+
+    document.getElementById("resposta").value = resposta;
+    }
+
+    function Mm()
+    {
+
+      var medida, resposta;
+
+    medida = parseFloat(document.getElementById("medida").value);
+
+    resposta = medida * 1000;
+
+    document.getElementById("resposta").value = resposta;
+    }
+
+</script>
+</html>
